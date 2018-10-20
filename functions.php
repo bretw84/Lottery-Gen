@@ -99,7 +99,22 @@ function getStats() {
 
 	}
 
-	$data = "<br><br><strong>Stats</strong><br>You have play ".$count." times.<br>You have spent: $".$spent."<br>You have won: $".$winnings;
+	$data = '';
+	$data .= "<h3><strong>Stats</strong></h3>";
+	$data .= "<table border='1' cellpadding='5'>";
+	$data .= "<tr>";
+	$data .= "<td>Games Played</td>";
+	$data .= "<td>".$count."</td>";
+	$data .= "</tr>";
+	$data .= "<tr>";
+	$data .= "<td>Money Spent</td>";
+	$data .= "<td>$".$spent."</td>";
+	$data .= "</tr>";
+	$data .= "<tr>";
+	$data .= "<td>Money Won</td>";
+	$data .= "<td>$".$winnings."</td>";
+	$data .= "</tr>";
+	$data .= "</table>";
 
 	return $data;
 
